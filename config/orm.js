@@ -35,11 +35,14 @@ function printQuestionMarks(num) {
   }
   
 var orm = {
-    selectAll: function(tableInput) {
+    selectAll: function(tableInput,cb) {
+      console.log("in orm.selectAll");
       var queryString = "SELECT * FROM ??";
       connection.query(queryString, [tableInput], function(err, result) {
         if (err) throw err;
-        console.log(result);
+        // console.log(result);
+        // console.log("calling back burger.all");
+        cb(result);
       });
     },
     insertOne: function(table, cols, vals,cb) {
