@@ -36,12 +36,9 @@ function printQuestionMarks(num) {
   
 var orm = {
     selectAll: function(tableInput,cb) {
-      console.log("in orm.selectAll");
       var queryString = "SELECT * FROM ??";
       connection.query(queryString, [tableInput], function(err, result) {
         if (err) throw err;
-        // console.log(result);
-        // console.log("calling back burger.all");
         cb(result);
       });
     },
@@ -55,11 +52,8 @@ var orm = {
       queryString += printQuestionMarks(vals.length);
       queryString += ") ";
 
-      console.log(queryString);
-
       connection.query(queryString, vals, function(err, result) {
         if (err) throw err;
-        console.log(result);
         cb(result);
       });
     },
@@ -71,17 +65,14 @@ var orm = {
         queryString += " WHERE ";
         queryString += condition;
     
-        console.log(queryString);
         connection.query(queryString, function(err, result) {
           if (err) {
             throw err;
           }
-    
           cb(result);
         });
       }
     
 }
-
-// Export the orm object for the model (cat.js).
+// Export the orm object for the model (orm.js).
 module.exports = orm;

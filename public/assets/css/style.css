@@ -15,44 +15,18 @@ img {
 
 h1 {
     text-align: center;
-    /* display: block;
-    margin-left: auto;
-    margin-right:auto;
-    margin-bottom: 3%;
-    margin-top: 2%; */
-
-
-    /* margin: auto 0;
-    margin-left: 20%;
-    margin-bottom: 3%;
-    margin-top: 2%; */
 }
 
 #avail {
-    /* background: chartreuse; */
     width: 48%;
     float: left;
     text-align: center;
-
-    /* text-align: cetner; */
-    /* margin-left: 10%; */
-    /* float: left;
-    margin-right: 6%;
-    margin-left: 10%; */
-
-
 }
 
 #devoured {
-    /* background: crimson; */
     width: 48%;
     float: left;
     text-align: center;
-    /* text-align: center; */
-   
-
-    /* float: left; */
-
 }
 
 li {
@@ -66,7 +40,6 @@ li {
     clear: both;
     text-align: center;
     padding-top: 3%;
-    /* margin-left: 25%; */
 }
 
 .form-group {
